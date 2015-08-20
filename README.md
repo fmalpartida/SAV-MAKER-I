@@ -107,18 +107,46 @@ A SoftwareSerial library allows for serial communication on any of the SAV MAKER
 The ATmega32U4 also supports I2C (TWI) and SPI communication. The Arduino software includes a Wire library to simplify use 
 of the I2C bus; see the documentation for details. For SPI communication, use the SPI library.
 
-### Programming
+## Board assembly
+![SAV MAKER I Assembly] (https://github.com/fmalpartida/SAV-MAKER-I/blob/master/images/SAV%20MAKER%20I%20RevA%20-%20assembly.png)
+
+|Qty   | Value | Parts | Reference part |
+| ---- |:------|:------|:---------------|
+|1		 |S1	   | `TAC_SWITCHSMD` | PTS525S |
+|7     |0.1uF  | `C1, C2, C5, C9, C10, C13, C14` | CAP1206 | VJ1206Y104KXXCW1BC |
+|1     |10uF   |`C6`     |CAP_POL1206	| F931A106MAA |
+|3     |1uF    |`C3, C4, C12` |CAP1206 |VJ1206Y105MXJTW1BC |
+|1     |4.7nF  |`C7`     |CAP1206     |VJ1206Y472KXXCW1BC |
+|2     |10K	   |`R2, R9` | R-US_R1206 | CRCW120610K0FKEA |
+|1     |1M	   |`R1`     |R-US_R1206  | RC1206FR-071ML |
+|2     |22R	   |`R4, R5` |R-US_R1206  | ERJ-8ENF22R0V |
+|1     |2K2    |`R11`    |R-US_R1206  |CRCW12062K20JNEA |
+|1     |1206L  |`F2`     |PTC1206_L   | 504-PTS120616V025 |
+|1     |Ferrite |`L1`   |WE-CBF_1206W | 2512061027Y1 |
+|1     |ATMEGA32U4-AU | `U1` |ATMEGA32U4-AU |ATMEGA32U4-AU |
+|1     |MBR0520LT| `D1`  | MBR0520LT | MBR0520LT1G |
+|1	   |RESONATORSMD |`Y1` | RESONATORSMD | CSTCE16M0V53-R0 |
+|1     |Red	PWR	|`LED1206`	| SML-LXF1206GC-TR |
+|1     |MINI USB|`USB`|	MINI-USB-SCHIELD-32005-201|10033526-N3212LF|
+|1     |AVR_SPI_PRG_6PTH |`J2` | AVR_SPI_PRG_6PTH	| |
+|3		 |M06SIP  |`JP3, JP5, JP6` | |	
+|1     |M081X08 |`JP4` | |	
+|2     |M10SIP M101X10 |`M10`  | |	
+|1     |`SAV Maker I` |	A	| BOARD_INFO_BMP_20	|
+
+
+## Programming
 The SAV MAKER I can be programmed with the Arduino software (download). Select `*Arduino Leonardo* from the Tools > Board menu`. 
 For details, see the reference and tutorials.
 You can also bypass the bootloader and program the microcontroller through the ICSP (In-Circuit Serial Programming) header.
 
-### Automatic (Software) Reset
+## Automatic (Software) Reset
 Rather than requiring a physical press of the reset button before an upload, the SAV MAKER I is designed in a way that 
 allows it to be reset by software running on a connected computer. 
 
 You may also be able to disable the auto-reset by connecting a 10uF Capacitor from Reset line to GND.
 
-### Overcurrent Protection
+## Overcurrent Protection
 The SAV MAKER I has 2 resettable polyfuses that protects your computer’s USB ports from shorts and over-current. 
 Although most computers today provide their own internal protection, the fuse gives you that extra layer. 
 If more than 500 mA is required, the fuse will automatically break the connection until the short or overload is removed.
