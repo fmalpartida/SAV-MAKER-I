@@ -1,32 +1,29 @@
 # SAV-MAKER-I
 ## Introduction
 
-The SAV MAKER I is an “open hardware” project made in Spain and based on the popular vinciDuino board, predecessor of 
-Arduino's Leonardo board and fully compatible with it. 
+The SAV MAKER I is an “open hardware” project made in Spain and based on the popular [vinciDuino board](https://bitbucket.org/fmalpartida/vinciduino/wiki/Home), 
+predecessor ofArduino's Leonardo board and fully compatible with it. 
 This development has been carried out for the Telecom Engineering "Applied Electronics" course carried out in the
-UMA (Universidad de Málaga). On day one, students receive a bare PCB and a set of components to assemble and will
-use it for some of their course projects.
+UMA (Universidad de Málaga). On day one, students will receive a bare PCB and a set of components to assemble and 
+use it on some of their course projects.
 
 ![SAV MAKER I Rev A] (https://github.com/fmalpartida/SAV-MAKER-I/blob/master/images/SAV%20MAKER%20I%20Rev%20A%20-%20PCBs.JPG)
 
 The SAV MAKER I is an “open hardware” project, a board with an 8-bit microcontroller similar to the Arduino Leonardo
-and fully compatible with it. The spirit of the project is to enable students to analyse, build on and share their work.
+and fully compatible with it. The spirit behind it is for students to be able to build and user their own tools, 
+analyse, build on and share their work.
 At the end of the year, the board will be revised with their contributions, and who knows, we may use the highest rated board
-on next year's course. I will be fun to see how the board evolves over the years.
+on next year's course. It will be fun to see how the board evolves over the years.
 
 Beign an open project where anyone can be part of the design team; anyone can bring knowledge, comments and ideas for 
-developing either an Arduino compatible training board or a programmable board using the Atmel environment without an 
-external programmer. It is not limited to students. However, in comparison with other similar “open hardware” projects is 
-that SAV MAKER I has been designed for people to  learn and build it. 
+developing other Arduino compatible training board or a programmable board using the Atmel environment without an 
+external programmer. It is not limited to students. However, in comparison with other similar “open hardware” projects the 
+SAV MAKER I has been designed for people to learn, build and use it while being cost effective. The cost has been optimized
+as much as possible to accomodate any budget and pursue the real open hardware’s spirit.
 
-It is not a board designed to be sold or manufactured in large quantities but instead is designed for anyone to assemble it 
-at home. This is the reason why it uses the largest possible SMD components. However, the design is perfectly fit to be ordered
-in large quantities. The cost tries to reach the minimum possible in order to spread the SAV MAKER I board concept and the 
-real open hardware’s spirit.
-
-Cost transparency is a must when it comes to “open hardware” especially when a community works selflessly.
-On this page, you will find all the information needed to order the electronic components and make the board from scratch, 
-also you will find tutorials to start using the board and projects undertaken by its users.
+It is not a board designed to be sold or manufactured in large quantities, instead it has been designed for anyone to 
+be able to assemble it at home. This is the reason why it uses the largest possible SMD components. However, the design is
+perfectly fit to be ordered in large quantities. 
 
 Currently the latest version of the board is Rev A, you can find all the related files in the download section.
 
@@ -149,7 +146,7 @@ allows it to be reset by software running on a connected computer.
 You may also be able to disable the auto-reset by connecting a 10uF Capacitor from Reset line to GND.
 
 ## Overcurrent Protection
-The SAV MAKER I has 2 resettable polyfuses that protects your computer’s USB ports from shorts and over-current. 
+The SAV MAKER I has 2 resettable polyfuse that protects your computer’s USB ports from shorts and over-current. 
 Although most computers today provide their own internal protection, the fuse gives you that extra layer. 
 If more than 500 mA is required, the fuse will automatically break the connection until the short or overload is removed.
 
