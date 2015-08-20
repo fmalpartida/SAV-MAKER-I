@@ -1,7 +1,7 @@
 # SAV-MAKER-I
 ## Introduction
 
-The SAV MAKER I is an “open hardware” project made in Spain based on the popular vinciDuino board, predecessor of 
+The SAV MAKER I is an “open hardware” project made in Spain and based on the popular vinciDuino board, predecessor of 
 Arduino's Leonardo board and fully compatible with it. 
 This development has been carried out for the Telecom Engineering "Applied Electronics" course carried out in the
 UMA (Universidad de Málaga). On day one, students receive a bare PCB and a set of components to assemble and will
@@ -45,6 +45,8 @@ Atmega32u4. This chip has the same features of the Atmega328 (used in UNO) with 
 - **SRAM**: 2,5 KB
 - **EEPROM**: 1 KB
 - **Clock Speed**: 16 MHz
+
+[SAV MAKER I schematic](https://github.com/fmalpartida/SAV-MAKER-I/blob/master/src/SAV%20MAKER%20I%20schematic.pdf)
 
 ### Supply
 The SAV MAKER I can be powered via the USB connection or with a 5V external power supply. The power source is selected 
@@ -152,5 +154,5 @@ Although most computers today provide their own internal protection, the fuse gi
 If more than 500 mA is required, the fuse will automatically break the connection until the short or overload is removed.
 
 ## Licensing
-All information contained herein is licensed under CERN OHL (please refer to license file for details), so if someone 
+All information contained herein is licensed under [CERN OHL](http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt) (please refer to license file for details), so if someone 
 wants to use this information to assemble kits, sell boards, etc. … feel free to do it.
