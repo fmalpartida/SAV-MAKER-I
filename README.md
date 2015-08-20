@@ -62,7 +62,7 @@ as a voltage input or output, depending on how you are sourcing power to the boa
 The ATmega32U4 has 32 KB. It also has 2,5 KB of SRAM and 1 KB of EEPROM (which can be read and written with the EEPROM library).
 
 ### Input/Output
-![SAV MAKER I Rev A Render] ()
+![SAV MAKER I Rev A Render] (https://github.com/fmalpartida/SAV-MAKER-I/blob/master/images/SAV%20MAKER%20I%20Rev%20A%20top.png)
 #### Discrete IOs
 Each of the 14 digital pins on the SAV MAKER I can be used as an input or output, using pinMode(), digitalWrite(), and 
 digitalRead() functions. They operate at 5 volts. Each pin can provide or receive a maximum of 40mA and has an internal 
