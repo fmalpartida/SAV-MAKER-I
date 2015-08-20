@@ -7,6 +7,8 @@ This development has been carried out for the Telecom Engineering "Applied Elect
 UMA (Universidad de Málaga). On day one, students receive a bare PCB and a set of components to assemble and will
 use it for some of their course projects.
 
+![SAV MAKER I Rev A] (https://github.com/fmalpartida/SAV-MAKER-I/blob/master/images/SAV%20MAKER%20I%20Rev%20A%20-%20PCBs.JPG)
+
 The SAV MAKER I is an “open hardware” project, a board with an 8-bit microcontroller similar to the Arduino Leonardo
 and fully compatible with it. The spirit of the project is to enable students to analyse, build on and share their work.
 At the end of the year, the board will be revised with their contributions, and who knows, we may use the highest rated board
@@ -60,6 +62,7 @@ as a voltage input or output, depending on how you are sourcing power to the boa
 The ATmega32U4 has 32 KB. It also has 2,5 KB of SRAM and 1 KB of EEPROM (which can be read and written with the EEPROM library).
 
 ### Input/Output
+![SAV MAKER I Rev A Render] ()
 #### Discrete IOs
 Each of the 14 digital pins on the SAV MAKER I can be used as an input or output, using pinMode(), digitalWrite(), and 
 digitalRead() functions. They operate at 5 volts. Each pin can provide or receive a maximum of 40mA and has an internal 
