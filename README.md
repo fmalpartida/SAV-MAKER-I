@@ -2,7 +2,7 @@
 ## Introduction
 
 The SAV MAKER I is an “open hardware” project made in Spain and based on the popular [vinciDuino board](https://bitbucket.org/fmalpartida/vinciduino/wiki/Home), 
-predecessor ofArduino's Leonardo board and fully compatible with it. 
+predecessor of Arduino's Leonardo board and fully compatible with it. 
 This development has been carried out for the Telecom Engineering "Applied Electronics" course carried out in the
 UMA (Universidad de Málaga). On day one, students will receive a bare PCB and a set of components to assemble and 
 use it on some of their course projects.
@@ -21,134 +21,11 @@ external programmer. It is not limited to students. However, in comparison with 
 SAV MAKER I has been designed for people to learn, build and use it while being cost effective. The cost has been optimized
 as much as possible to accomodate any budget and pursue the real open hardware’s spirit.
 
-It is not a board designed to be sold or manufactured in large quantities, instead it has been designed for anyone to 
-be able to assemble it at home. This is the reason why it uses the largest possible SMD components. However, the design is
-perfectly fit to be ordered in large quantities. 
-
-Currently the latest version of the board is Rev A, you can find all the related files in the download section.
-
-## Specifications
-The SAV MAKER I has the same form factor and connectors as the Arduino Pro, however it uses a different processor, the 
-Atmega32u4. This chip has the same features of the Atmega328 (used in UNO) with the added benefit of having built in USB.
-
-- **Microcontroller**: ATmega32U4
-- **Operating Voltage**: 5V
-- **Input Voltage (recommended)**: 5V
-- **Digital I/O Pins**: 14 (of which 6 provide PWM output) + 6 (analog pins)
-- **Analog Input Pins**: 6
-- **DC Current per I/O Pin**:	40 mA
-- **DC Current for 3.3V Pin**: 50 mA
-- **Flash Memory**: 32 KB (-2KB bootloader)
-- **SRAM**: 2,5 KB
-- **EEPROM**: 1 KB
-- **Clock Speed**: 16 MHz
-
-[SAV MAKER I schematic](https://github.com/fmalpartida/SAV-MAKER-I/blob/master/src/SAV%20MAKER%20I%20schematic.pdf)
-
-### Supply
-The SAV MAKER I can be powered via the USB connection or with a 5V external power supply. The power source is selected 
-automatically.
-External (non-USB) power can come either from an AC-to-DC adapter (wall-wart) or battery. The adapter can be connected 
-to its supply pins or via USB. Leads from a battery can be inserted in the Gnd and 5V pin headers of the POWER connector.
-- *VIN*. Not used.
-- *5V (in or out)*. The regulated power supply used to power the microcontroller and other components on the board. This can be used
-as a voltage input or output, depending on how you are sourcing power to the board.
-- *3V3 (out)*. Are derived from the on chip regulator and accessible through the 3.3V pin. This pin will only supply up to 
-50mA (25 mA when the usb is in use).
-- *GND*. Ground pins.
-
-###Memory
-The ATmega32U4 has 32 KB. It also has 2,5 KB of SRAM and 1 KB of EEPROM (which can be read and written with the EEPROM library).
-
-### Input/Output
-![SAV MAKER I Rev A Render] (https://github.com/fmalpartida/SAV-MAKER-I/blob/master/images/SAV%20MAKER%20I%20Rev%20A%20top.png)
-#### Discrete IOs
-Each of the 14 digital pins on the SAV MAKER I can be used as an input or output, using pinMode(), digitalWrite(), and 
-digitalRead() functions. They operate at 5 volts. Each pin can provide or receive a maximum of 40mA and has an internal 
-pull-up resistor (disconnected by default) of 20-50 kOhms. In addition, some pins have specialized functions:
-
-- **Serial**: 0 (RX) and 1 (TX). Used to receive (RX) and transmit (TX) TTL serial data. Broken out on UART header too.
-- **External Interrupts**: 2 and 3. These pins can be configured to trigger an interrupt on a low value, a rising or falling 
-edge, or a change in value. See the attachInterrupt() function for details.
-- **PWM**: 3 (8bits), 5 (8bits), 6 (FastPWM), 9 (16bits), 10 (16bits), and 11 (8/16bits). Provide PWM output with the 
-analogWrite() function.
-- **SPI**: Dedicated ISP conector: 14 (SS), 16 (MOSI), 17 (MISO), 15 (SCK). These pins support SPI communication using the 
-SPI library.
-
-#### Analog
-The SAV MAKER I has 6 analog inputs, labeled A0 through A5, each of which provide 10 bits of resolution 
-(i.e. 1024 different values). By default they measure from ground to 5 volts, though is it possible to change the upper 
-end of their range using the AREF pin and the analogReference() function. 
-- *AREF*. Reference voltage for the analog inputs. Used with analogReference().
-
-
-#### Specialized functionality pins
-- **TWI**: Dedicated pins SDA and SCL. Support TWI communication using the Wire library. Pins are shared with IO 2 and 3.
-- **SPI**: ICSP header for programming and SPI operation.
-
-#### Other
-- **Reset**. Bring this line LOW to reset the microcontroller. Typically used to add a reset button to shields which 
-block the one on the board.
-
-### Communication
-The SAV MAKER I has a number of interfaces for communicating with a computer, with another Arduino, or other microcontrollers.
-
-The ATmega32U4The provides UART TTL (5V) serial communication, which is available on digital pins 0 (RX) and 1 (TX), 
-or through the dedicated header connector.
-
-The built-in USB controller channels this serial communication over USB and appears as a virtual com port to software on the 
-computer. The 32U2 firmware uses the standard USB COM drivers, and no external driver is needed.
-However, on Windows, a .inf file is required. The Arduino software includes a serial monitor which allows simple textual data 
-to be sent to and from the Arduino board.
-
-A SoftwareSerial library allows for serial communication on any of the SAV MAKER I’s digital pins.
-
-The ATmega32U4 also supports I2C (TWI) and SPI communication. The Arduino software includes a Wire library to simplify use 
-of the I2C bus; see the documentation for details. For SPI communication, use the SPI library.
-
-## Board assembly
-![SAV MAKER I Assembly] (https://github.com/fmalpartida/SAV-MAKER-I/blob/master/images/SAV%20MAKER%20I%20RevA%20-%20assembly.png)
-
-|Qty   | Value | Parts | Reference part |
-| ---- |:------|:------|:---------------|
-|1		 |S1	   | `TAC_SWITCHSMD` | PTS525S |
-|7     |0.1uF  | `C1, C2, C5, C9, C10, C13, C14` | CAP1206 | VJ1206Y104KXXCW1BC |
-|1     |10uF   |`C6`     |CAP_POL1206	| F931A106MAA |
-|3     |1uF    |`C3, C4, C12` |CAP1206 |VJ1206Y105MXJTW1BC |
-|1     |4.7nF  |`C7`     |CAP1206     |VJ1206Y472KXXCW1BC |
-|2     |10K	   |`R2, R9` | R-US_R1206 | CRCW120610K0FKEA |
-|1     |1M	   |`R1`     |R-US_R1206  | RC1206FR-071ML |
-|2     |22R	   |`R4, R5` |R-US_R1206  | ERJ-8ENF22R0V |
-|1     |2K2    |`R11`    |R-US_R1206  |CRCW12062K20JNEA |
-|1     |1206L  |`F2`     |PTC1206_L   | 504-PTS120616V025 |
-|1     |Ferrite |`L1`   |WE-CBF_1206W | 2512061027Y1 |
-|1     |ATMEGA32U4-AU | `U1` |ATMEGA32U4-AU |ATMEGA32U4-AU |
-|1     |MBR0520LT| `D1`  | MBR0520LT | MBR0520LT1G |
-|1	   |RESONATORSMD |`Y1` | RESONATORSMD | CSTCE16M0V53-R0 |
-|1     |Red	PWR	|`LED1206`	| SML-LXF1206GC-TR |
-|1     |MINI USB|`USB`|	MINI-USB-SCHIELD-32005-201|10033526-N3212LF|
-|1     |AVR_SPI_PRG_6PTH |`J2` | AVR_SPI_PRG_6PTH	| |
-|3		 |M06SIP  |`JP3, JP5, JP6` | |	
-|1     |M081X08 |`JP4` | |	
-|2     |M10SIP M101X10 |`M10`  | |	
-|1     |`SAV Maker I` |	A	| BOARD_INFO_BMP_20	|
-
-
-## Programming
-The SAV MAKER I can be programmed with the Arduino software (download). Select `*Arduino Leonardo* from the Tools > Board menu`. 
-For details, see the reference and tutorials.
-You can also bypass the bootloader and program the microcontroller through the ICSP (In-Circuit Serial Programming) header.
-
-## Automatic (Software) Reset
-Rather than requiring a physical press of the reset button before an upload, the SAV MAKER I is designed in a way that 
-allows it to be reset by software running on a connected computer. 
-
-You may also be able to disable the auto-reset by connecting a 10uF Capacitor from Reset line to GND.
-
-## Overcurrent Protection
-The SAV MAKER I has 2 resettable polyfuse that protects your computer’s USB ports from shorts and over-current. 
-Although most computers today provide their own internal protection, the fuse gives you that extra layer. 
-If more than 500 mA is required, the fuse will automatically break the connection until the short or overload is removed.
+## Wiki contents
+[SAV MAKER I wiki home]()
+[Specifications]()
+[Board assembly and mechanical drawings]()
+[Board assembly step by step]()
 
 ## Licensing
 All information contained herein is licensed under [CERN OHL](http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt) (please refer to license file for details), so if someone 
