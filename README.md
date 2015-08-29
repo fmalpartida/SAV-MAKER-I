@@ -22,10 +22,10 @@ SAV MAKER I has been designed for people to learn, build and use it while being 
 as much as possible to accomodate any budget and pursue the real open hardware’s spirit.
 
 ## Wiki contents
-[SAV MAKER I wiki home]()
-[Specifications]()
-[Board assembly and mechanical drawings]()
-[Board assembly step by step]()
+* [SAV MAKER I wiki home](https://github.com/fmalpartida/SAV-MAKER-I/wiki)
+* [Specifications](https://github.com/fmalpartida/SAV-MAKER-I/wiki/Specifications)
+* [Board assembly and mechanical drawings](https://github.com/fmalpartida/SAV-MAKER-I/wiki/Mechanical-drawings-and-component-placement)
+* [Board assembly step by step](https://github.com/fmalpartida/SAV-MAKER-I/wiki/Assembly-guide)
 
 ## Licensing
 All information contained herein is licensed under [CERN OHL](http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt) (please refer to license file for details), so if someone 
