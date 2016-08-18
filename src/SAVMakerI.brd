@@ -23,7 +23,7 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -9700,11 +9700,11 @@ design rules under a new name.</description>
 <element name="U$3" library="SparkFun" package="STAND-OFF" value="" x="50.8" y="7.62"/>
 <element name="U$5" library="SparkFun" package="STAND-OFF" value="" x="5.08" y="2.54"/>
 <element name="U$9" library="fmc" package="ELECTROFUN_STRIP" value="" x="46.99" y="7.62" rot="MR0"/>
-<element name="U$10" library="SAVMakerI" package="SAVMAKERI" value="" x="7.62" y="8.89"/>
+<element name="U$10" library="SAVMakerI" package="SAVMAKERI" value="" x="7.493" y="12.7"/>
 <element name="U$16" library="SAVMakerI" package="ANALOG_BMP" value="" x="36.068" y="7.112"/>
 <element name="U$17" library="SAVMakerI" package="DIGITAL_BMP" value="" x="22.987" y="42.545"/>
 <element name="U$18" library="SAVMakerI" package="POWER_BMP" value="" x="19.177" y="7.239"/>
-<element name="U$13" library="SAVMakerI" package="OSHW" value="" x="9.906" y="1.397"/>
+<element name="U$13" library="SAVMakerI" package="OSHW" value="" x="8.89" y="2.54"/>
 <element name="B" library="fmc" package="BOARD_INFO_BMP" value="SAV Maker I" x="36.83" y="24.13" rot="MR0"/>
 <element name="U$14" library="fmc" package="CERN_OHL" value="" x="36.83" y="17.78" rot="MR0"/>
 <element name="U$15" library="SAVMakerI" package="OSHW" value="" x="25.4" y="16.764" rot="MR0"/>
