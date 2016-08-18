@@ -8006,6 +8006,7 @@ Source: www.cypressindustries.com</description>
 <wire x1="304.8" y1="96.52" x2="304.8" y2="236.22" width="0.1524" layer="94"/>
 <wire x1="15.24" y1="175.26" x2="137.16" y2="175.26" width="0.1524" layer="94"/>
 <text x="292.1" y="25.4" size="3.81" layer="97" ratio="15">SAV Maker I - by fm</text>
+<text x="383.794" y="6.604" size="3.81" layer="95">B</text>
 </plain>
 <instances>
 <instance part="C10" gate="G$1" x="170.18" y="203.2" smashed="yes">
