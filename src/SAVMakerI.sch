@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.0.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5428,35 +5428,6 @@ chip</description>
 <rectangle x1="0.9517" y1="-0.8491" x2="1.7018" y2="0.8509" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
 </package>
-<package name="RESONATOR-815-AWSCR">
-<wire x1="-2.286" y1="2.032" x2="-2.286" y2="-2.032" width="0.127" layer="21"/>
-<wire x1="2.262" y1="2.032" x2="2.262" y2="-2.032" width="0.127" layer="21"/>
-<smd name="1" x="-1.524" y="0" dx="4.6" dy="0.8" layer="1" rot="R90"/>
-<smd name="2" x="0" y="0" dx="4.6" dy="1.1" layer="1" rot="R90"/>
-<smd name="3" x="1.524" y="0" dx="4.6" dy="0.8" layer="1" rot="R90"/>
-</package>
-<package name="RESONATOR-PTH">
-<wire x1="-2.286" y1="1.778" x2="-2.286" y2="-1.778" width="0.2032" layer="21" curve="162.403081"/>
-<wire x1="2.286" y1="-1.778" x2="2.286" y2="1.778" width="0.2032" layer="21" curve="162.403081"/>
-<wire x1="-2.286" y1="-1.778" x2="2.286" y2="-1.778" width="0.2032" layer="21" curve="12.71932"/>
-<wire x1="2.286" y1="1.778" x2="-2.286" y2="1.778" width="0.2032" layer="21" curve="12.758496"/>
-<pad name="1" x="-2.54" y="0" drill="0.8" diameter="1.8796"/>
-<pad name="2" x="0" y="0" drill="0.8" diameter="1.8796"/>
-<pad name="3" x="2.54" y="0" drill="0.8" diameter="1.8796"/>
-</package>
-<package name="RESONATOR-SMD">
-<wire x1="1.8" y1="0.65" x2="1.8" y2="-0.65" width="0.2032" layer="21"/>
-<wire x1="-1.8" y1="-0.65" x2="-1.8" y2="0.65" width="0.2032" layer="21"/>
-<wire x1="-1.6" y1="0.65" x2="1.6" y2="0.65" width="0.127" layer="51"/>
-<wire x1="1.6" y1="0.65" x2="1.6" y2="-0.65" width="0.127" layer="51"/>
-<wire x1="1.6" y1="-0.65" x2="-1.6" y2="-0.65" width="0.127" layer="51"/>
-<wire x1="-1.6" y1="-0.65" x2="-1.6" y2="0.65" width="0.127" layer="51"/>
-<smd name="1" x="-1.2" y="0" dx="0.3302" dy="1.6002" layer="1"/>
-<smd name="2" x="0" y="0" dx="0.3302" dy="1.6002" layer="1"/>
-<smd name="3" x="1.2" y="0" dx="0.3302" dy="1.6002" layer="1"/>
-<text x="-0.889" y="1.27" size="0.4064" layer="25">&gt;Name</text>
-<text x="-0.889" y="-1.524" size="0.4064" layer="27">&gt;Value</text>
-</package>
 </packages>
 <symbols>
 <symbol name="CAP">
@@ -5468,38 +5439,6 @@ chip</description>
 <rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
 <pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
-</symbol>
-<symbol name="RESONATOR">
-<wire x1="1.016" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.016" y2="0" width="0.1524" layer="94"/>
-<wire x1="-0.381" y1="1.524" x2="-0.381" y2="-1.524" width="0.1524" layer="94"/>
-<wire x1="-0.381" y1="-1.524" x2="0.381" y2="-1.524" width="0.1524" layer="94"/>
-<wire x1="0.381" y1="-1.524" x2="0.381" y2="1.524" width="0.1524" layer="94"/>
-<wire x1="0.381" y1="1.524" x2="-0.381" y2="1.524" width="0.1524" layer="94"/>
-<wire x1="1.016" y1="1.778" x2="1.016" y2="0" width="0.1524" layer="94"/>
-<wire x1="1.016" y1="0" x2="1.016" y2="-1.778" width="0.1524" layer="94"/>
-<wire x1="-1.016" y1="1.778" x2="-1.016" y2="0" width="0.1524" layer="94"/>
-<wire x1="-1.016" y1="0" x2="-1.016" y2="-1.778" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="2.54" y2="-2.032" width="0.1524" layer="94"/>
-<wire x1="3.302" y1="-2.032" x2="2.54" y2="-2.032" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-2.032" x2="1.778" y2="-2.032" width="0.1524" layer="94"/>
-<wire x1="3.302" y1="-3.048" x2="2.54" y2="-3.048" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-3.048" x2="1.778" y2="-3.048" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-3.048" x2="2.54" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="-1.778" y1="-3.048" x2="-2.54" y2="-3.048" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="-3.048" x2="-3.302" y2="-3.048" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="-3.048" x2="-2.54" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="-1.778" y1="-2.032" x2="-2.54" y2="-2.032" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="-2.032" x2="-3.302" y2="-2.032" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="-2.032" x2="-2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="0" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="0" y1="-5.08" x2="-2.54" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="0" y1="-5.08" x2="0" y2="-7.62" width="0.1524" layer="94"/>
-<pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
-<pin name="2" x="0" y="-7.62" visible="off" length="point" direction="pas" swaplevel="1" rot="R90"/>
-<pin name="3" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
-<text x="2.54" y="1.016" size="1.778" layer="95">&gt;NAME</text>
-<text x="2.54" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -5604,45 +5543,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="RESONATOR" prefix="Y">
-<description>&lt;b&gt;Resonator&lt;/b&gt;
-Small SMD resonator. This is the itty bitty 10/20MHz resonators with built in caps. CSTCE10M0G55 and CSTCE20M0V53. Footprint has been reviewed closely but hasn't been tested yet.</description>
-<gates>
-<gate name="G$1" symbol="RESONATOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="RESONATOR-815-AWSCR">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="PTH" package="RESONATOR-PTH">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="SMD" package="RESONATOR-SMD">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -7541,6 +7441,24 @@ by exp-lbrs.ulp</description>
 <text x="9.2967125" y="4.855715625" size="1.016" layer="21" font="vector" ratio="12">&gt;NAME</text>
 <text x="2.8663125" y="7.492984375" size="1.016" layer="21" font="vector" ratio="12">&gt;VALUE</text>
 </package>
+<package name="CSM-3X">
+<smd name="1" x="2.775" y="0" dx="3.5" dy="1.2" layer="1"/>
+<smd name="2" x="-2.775" y="0" dx="3.5" dy="1.2" layer="1"/>
+<wire x1="-3" y1="0.8" x2="-3" y2="2" width="0.127" layer="21"/>
+<wire x1="-3" y1="2" x2="3" y2="2" width="0.127" layer="21"/>
+<wire x1="3" y1="2" x2="3" y2="0.8" width="0.127" layer="21"/>
+<wire x1="3" y1="-0.8" x2="3" y2="-2" width="0.127" layer="21"/>
+<wire x1="3" y1="-2" x2="-3" y2="-2" width="0.127" layer="21"/>
+<wire x1="-3" y1="-2" x2="-3" y2="-0.8" width="0.127" layer="21"/>
+<wire x1="-2.7" y1="0.8" x2="-1.9" y2="1.6" width="0.127" layer="21" curve="-90"/>
+<wire x1="-1.9" y1="1.6" x2="2" y2="1.6" width="0.127" layer="21"/>
+<wire x1="2" y1="1.6" x2="2.8" y2="0.8" width="0.127" layer="21" curve="-90"/>
+<wire x1="2.7" y1="-0.8" x2="1.9" y2="-1.6" width="0.127" layer="21" curve="-90"/>
+<wire x1="1.9" y1="-1.6" x2="-1.9" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="-1.9" y1="-1.6" x2="-2.7" y2="-0.8" width="0.127" layer="21" curve="-90"/>
+<text x="-1.7" y="2.3" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-1.7" y="-3" size="0.8128" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="BOARD_INFO_BMP">
@@ -7551,6 +7469,18 @@ by exp-lbrs.ulp</description>
 <text x="-2.54" y="5.08" size="1.016" layer="94" font="vector" ratio="12">&gt;NAME</text>
 <text x="-2.54" y="-5.08" size="1.016" layer="94" font="vector" ratio="12">&gt;VALUE</text>
 </symbol>
+<symbol name="CRYSTAL">
+<wire x1="-1.524" y1="2.54" x2="1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="-1.524" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="-2.54" x2="-1.524" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<pin name="1" x="-7.62" y="0" visible="off" length="middle"/>
+<pin name="2" x="7.62" y="0" visible="pad" length="middle" rot="R180"/>
+<text x="-3.302" y="3.556" size="1.6764" layer="95" ratio="11">&gt;NAME</text>
+<text x="-3.81" y="-5.334" size="1.4224" layer="96" ratio="12">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="BOARD_INFO_BMP_20">
@@ -7559,6 +7489,22 @@ by exp-lbrs.ulp</description>
 </gates>
 <devices>
 <device name="" package="BOARD_INFO_BMP">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CSM-3X-CRYSTAL">
+<gates>
+<gate name="G$1" symbol="CRYSTAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="CSM-3X" package="CSM-3X">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -7935,7 +7881,6 @@ Source: www.cypressindustries.com</description>
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0" drill="0">
-<clearance class="0" value="0.1778"/>
 </class>
 <class number="1" name="vcc" width="0.254" drill="0">
 <clearance class="0" value="0.254"/>
@@ -8008,12 +7953,15 @@ Source: www.cypressindustries.com</description>
 <part name="JP6" library="SparkFun" deviceset="M06" device="SIP"/>
 <part name="J2" library="SparkFun" deviceset="AVR_SPI_PRG_6" device="PTH"/>
 <part name="S1" library="SparkFun" deviceset="TAC_SWITCH" device="SMD"/>
-<part name="Y1" library="sparkfun_2" deviceset="RESONATOR" device="SMD"/>
-<part name="GND4" library="SparkFun" deviceset="GND" device=""/>
-<part name="A" library="fmc" deviceset="BOARD_INFO_BMP_20" device="" value="SAV Maker I"/>
+<part name="B" library="fmc" deviceset="BOARD_INFO_BMP_20" device="" value="SAV Maker I"/>
 <part name="R1" library="adafruit" deviceset="R-US_" device="R1206" value="1M"/>
 <part name="C7" library="sparkfun_2" deviceset="CAP" device="1206" value="4.7nF"/>
 <part name="GND8" library="supply1" deviceset="GND" device="" value="GNDS"/>
+<part name="GND10" library="SparkFun" deviceset="GND" device=""/>
+<part name="C15" library="sparkfun_2" deviceset="CAP" device="1206" value="18pF"/>
+<part name="C16" library="sparkfun_2" deviceset="CAP" device="1206" value="18pF"/>
+<part name="GND22" library="SparkFun" deviceset="GND" device=""/>
+<part name="Q1" library="fmc" deviceset="CSM-3X-CRYSTAL" device="CSM-3X"/>
 </parts>
 <sheets>
 <sheet>
@@ -8164,12 +8112,24 @@ Source: www.cypressindustries.com</description>
 <instance part="JP6" gate="G$1" x="335.28" y="58.42"/>
 <instance part="J2" gate="G$1" x="50.8" y="66.04"/>
 <instance part="S1" gate="S" x="129.54" y="50.8" rot="R90"/>
-<instance part="Y1" gate="G$1" x="182.88" y="114.3"/>
-<instance part="GND4" gate="1" x="182.88" y="104.14"/>
-<instance part="A" gate="G$1" x="241.3" y="15.24"/>
+<instance part="B" gate="G$1" x="241.3" y="15.24"/>
 <instance part="R1" gate="G$1" x="86.36" y="111.76" rot="R180"/>
 <instance part="C7" gate="G$1" x="86.36" y="116.84" rot="R90"/>
 <instance part="GND8" gate="1" x="93.98" y="104.14"/>
+<instance part="GND10" gate="1" x="190.5" y="101.6" rot="MR0"/>
+<instance part="C15" gate="G$1" x="175.26" y="106.68" smashed="yes">
+<attribute name="NAME" x="169.164" y="109.601" size="1.778" layer="95"/>
+<attribute name="VALUE" x="167.64" y="104.521" size="1.778" layer="96"/>
+</instance>
+<instance part="C16" gate="G$1" x="190.5" y="106.68" smashed="yes">
+<attribute name="NAME" x="192.024" y="109.601" size="1.778" layer="95"/>
+<attribute name="VALUE" x="193.04" y="104.521" size="1.778" layer="96"/>
+</instance>
+<instance part="GND22" gate="1" x="175.26" y="101.6" rot="MR0"/>
+<instance part="Q1" gate="G$1" x="182.88" y="111.76" smashed="yes">
+<attribute name="NAME" x="182.118" y="115.316" size="1.6764" layer="95" ratio="11"/>
+<attribute name="VALUE" x="191.77" y="114.046" size="1.4224" layer="96" ratio="12"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -8383,18 +8343,24 @@ Source: www.cypressindustries.com</description>
 </net>
 <net name="N$3" class="0">
 <segment>
-<wire x1="185.42" y1="149.86" x2="210.82" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="149.86" x2="210.82" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="XTAL2"/>
-<wire x1="185.42" y1="149.86" x2="185.42" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="Y1" gate="G$1" pin="3"/>
+<pinref part="C16" gate="G$1" pin="1"/>
+<pinref part="Q1" gate="G$1" pin="2"/>
+<wire x1="190.5" y1="149.86" x2="190.5" y2="111.76" width="0.1524" layer="91"/>
+<junction x="190.5" y="111.76"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <wire x1="210.82" y1="157.48" x2="180.34" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="XTAL1"/>
-<wire x1="180.34" y1="114.3" x2="180.34" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="Y1" gate="G$1" pin="1"/>
+<wire x1="180.34" y1="157.48" x2="180.34" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="116.84" x2="175.26" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="C15" gate="G$1" pin="1"/>
+<pinref part="Q1" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="116.84" x2="175.26" y2="111.76" width="0.1524" layer="91"/>
+<junction x="175.26" y="111.76"/>
 </segment>
 </net>
 <net name="D10" class="0">
@@ -8915,8 +8881,12 @@ Source: www.cypressindustries.com</description>
 <pinref part="GND20" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="Y1" gate="G$1" pin="2"/>
-<pinref part="GND4" gate="1" pin="GND"/>
+<pinref part="C15" gate="G$1" pin="2"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C16" gate="G$1" pin="2"/>
+<pinref part="GND10" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
